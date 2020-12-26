@@ -78,7 +78,7 @@ public class Main {
         //2.检测参数
         switch (args.length) {
             case 0:
-                getVideoInfo(new User("user.config"));
+                getVideoInfo(new User("user.json"));
                 break;
             case 1:
                 getVideoInfo(new User(args[0]));
