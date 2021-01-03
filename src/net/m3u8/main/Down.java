@@ -26,7 +26,7 @@ public class Down {
         //设置重试次数
         m3u8Download.setRetryCount(5);
         //设置连接超时时间（单位：毫秒）
-        m3u8Download.setTimeoutMillisecond(5000L);
+        m3u8Download.setTimeoutMillisecond(50000L);
         /*
         设置日志级别
         可选值：NONE INFO DEBUG ERROR
@@ -69,6 +69,7 @@ public class Down {
                 System.out.println("下载完毕✌✌✌ \t" + poll.getName());
                 System.out.println();
                 try {
+                    M3u8DownloadFactory.destroied();
                     Thread.sleep(2000);
                 } catch (Exception e) {
                     e.printStackTrace();
