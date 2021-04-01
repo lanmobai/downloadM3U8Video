@@ -111,14 +111,14 @@ public class Main {
         });
         list.forEach(video -> {
             if (video.getUrl().contains(".m3u8?")) {
-                String mp4 = MyHostURL + "video/" + video.getDir() + "/" + video.getName() + ".mp4";
+                String mp4 = video.getDir() + "/" + video.getName() + ".mp4";
                 if (new File(mp4).exists()) {
                     System.out.println(mp4 + "\t文件已存在，跳过。");
                 } else {
                     queue.offer(video);
                 }
             } else if (video.getUrl().contains(".mp4?")) {
-                String mp4 = MyHostURL + "video/" + video.getDir() + "/" + video.getName() + ".mp4";
+                String mp4 = video.getDir() + "/" + video.getName() + ".mp4";
                 if (new File(mp4).exists()) {
                     System.out.println(mp4 + "\t文件已存在，跳过。");
                 } else {
@@ -129,7 +129,7 @@ public class Main {
                 if (new File(zip).exists()) {
                     System.out.println(zip + "\t文件已存在，跳过。");
                 } else {
-                    new File(MyHostURL + "video/" + video.getDir() + "/资料/").mkdirs();
+                    new File(video.getDir() + "/资料/").mkdirs();
                     okDown(video.getUrl(), zip);
                 }
             }
@@ -164,7 +164,7 @@ public class Main {
                     sections.getSectionItems().forEach(section -> {
                         //打印一些信息
                         System.out.println("\t" + section.getSectionName());
-                        String dir = MyHostURL + "data/" + bo.getGradeName() + File.separator + moduleId.substring(10) +
+                        String dir = MyHostURL + "video/" + bo.getGradeName() + File.separator + moduleId.substring(10) +
                                 File.separator + section.getSectionName();
                         List<PointItem> pointItems = section.getPointItems();
                         pointItems.forEach(point -> {
@@ -190,7 +190,6 @@ public class Main {
     }
 
     static void okDown(String src, String name) {
-        name = MyHostURL + "video/" + name;
         try {
             if (new File(name).exists()) {
                 System.out.println(name + " : 已存在，跳过！");

@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed93e1d3-8c72-4347-bf60-1a82162bfc4d" name="Default Changelist" comment="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory$M3u8Download.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory$M3u8Download.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/main/Down.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/main/Down.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/m3u8/download/M3u8DownloadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/m3u8/download/M3u8DownloadFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/m3u8/main/Down.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/m3u8/main/Down.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day0705/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day0705/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +64,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="day0705.Main" />
       <module name="boxuegu" />
+      <option name="PROGRAM_PARAMETERS" value="d $USER_HOME$/Downloads/Java/video/JavaEE在线就业班2.0.json" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,7 +100,7 @@
       <workItem from="1616559805582" duration="1304000" />
       <workItem from="1616727035375" duration="1339000" />
       <workItem from="1616739791051" duration="1115000" />
-      <workItem from="1617188629599" duration="30825000" />
+      <workItem from="1617188629599" duration="32888000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617259996786</created>
@@ -132,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617263409180</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="11">
+      <created>1617267510098</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617267510099</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +159,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="更新 readme" />
     <MESSAGE value="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
+    <MESSAGE value="11" />
+    <option name="LAST_COMMIT_MESSAGE" value="11" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
