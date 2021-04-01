@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed93e1d3-8c72-4347-bf60-1a82162bfc4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README1.md" beforeDir="false" afterPath="$PROJECT_DIR$/README1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,6 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="day0705.Main" />
       <module name="boxuegu" />
-      <option name="PROGRAM_PARAMETERS" value="d $USER_HOME$/Downloads/Java/data/JavaEE在线就业班-m3u8-test.json" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,7 +99,7 @@
       <workItem from="1616559805582" duration="1304000" />
       <workItem from="1616727035375" duration="1339000" />
       <workItem from="1616739791051" duration="1115000" />
-      <workItem from="1617188629599" duration="25942000" />
+      <workItem from="1617188629599" duration="27371000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617259996786</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617260978585</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新 readme">
+      <created>1617261172003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617261172003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,18 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/day0705/Main.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="更新 readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新 readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
