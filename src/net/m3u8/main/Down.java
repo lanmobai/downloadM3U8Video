@@ -18,7 +18,7 @@ public class Down {
         Video poll = queue.poll();
         M3u8DownloadFactory.M3u8Download m3u8Download = M3u8DownloadFactory.getInstance(poll.getUrl());
         //设置生成目录
-        m3u8Download.setDir("Video/" + poll.getDir());
+        m3u8Download.setDir(poll.getDir());
         //设置视频名称
         m3u8Download.setFileName(poll.getName());
         //设置线程数
@@ -40,7 +40,7 @@ public class Down {
         m3u8Download.addRequestHeaderMap(headersMap);*/
 
         //先清空
-        m3u8Download.clearListener();
+        //m3u8Download.clearListener();
         //添加监听器
         m3u8Download.addListener(new DownloadListener() {
             @Override

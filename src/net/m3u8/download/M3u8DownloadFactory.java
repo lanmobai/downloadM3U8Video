@@ -113,7 +113,7 @@ public class M3u8DownloadFactory {
             checkField();
             String tsUrl = getTsUrl();
             if (StringUtils.isEmpty(tsUrl))
-                System.out.println("不需要解密");
+                Log.i("不需要解密");
             startDownload();
         }
 
@@ -144,19 +144,19 @@ public class M3u8DownloadFactory {
                         consume++;
                         BigDecimal bigDecimal = new BigDecimal(downloadBytes.toString());
                         Thread.sleep(1000L);
-                        System.out.println("已用时" + consume + "秒！\t下载速度：" + StringUtils.convertToDownloadSpeed(new BigDecimal(downloadBytes.toString()).subtract(bigDecimal), 3) + "/s");
-                        System.out.println("\t已完成" + finishedCount + "个，还剩" + (tsSet.size() - finishedCount) + "个！");
-                        System.out.println(new BigDecimal(finishedCount).divide(new BigDecimal(tsSet.size()), 4, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_HALF_UP) + "%");
+                        Log.i("已用时" + consume + "秒！\t下载速度：" + StringUtils.convertToDownloadSpeed(new BigDecimal(downloadBytes.toString()).subtract(bigDecimal), 3) + "/s");
+                        Log.i("\t已完成" + finishedCount + "个，还剩" + (tsSet.size() - finishedCount) + "个！");
+                        Log.i(new BigDecimal(finishedCount).divide(new BigDecimal(tsSet.size()), 4, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_HALF_UP) + "%");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-                System.out.println("下载完成，正在合并文件！共" + finishedFiles.size() + "个！" + StringUtils.convertToDownloadSpeed(downloadBytes, 3));
+                Log.i("下载完成，正在合并文件！共" + finishedFiles.size() + "个！" + StringUtils.convertToDownloadSpeed(downloadBytes, 3));
                 //开始合并视频
                 mergeTs();
                 //删除多余的ts片段
                 deleteFiles();
-                System.out.println("视频合并完成，欢迎使用!");
+                Log.i("视频合并完成，欢迎使用!");
             }).start();
             startListener(fixedThreadPool);
         }
@@ -299,10 +299,10 @@ public class M3u8DownloadFactory {
                         break;
                     } catch (Exception e) {
                         if (e instanceof InvalidKeyException || e instanceof InvalidAlgorithmParameterException) {
-                            System.out.println("解密失败！");
+                            Log.e("解密失败！");
                             break;
                         }
-                        System.out.println("第" + count + "获取链接重试！\t" + urls);
+                        Log.d("第" + count + "获取链接重试！\t" + urls);
                         count++;
 //                        e.printStackTrace();
                     } finally {
@@ -460,10 +460,10 @@ public class M3u8DownloadFactory {
                         content.append(line).append("\n");
                     bufferedReader.close();
                     inputStream.close();
-//                    Log.i(content);
+                    Log.i(content);
                     break;
                 } catch (Exception e) {
-                    System.out.println("第" + count + "获取链接重试！\t" + urls);
+                    Log.d("第" + count + "获取链接重试！\t" + urls);
                     count++;
 //                    e.printStackTrace();
                 } finally {
@@ -565,7 +565,6 @@ public class M3u8DownloadFactory {
                     try {
                         BLOCKING_QUEUE.put(new byte[Constant.BYTE_COUNT]);
                     } catch (InterruptedException ignored) {
-                        ignored.printStackTrace();
                     }
                 }
             }
@@ -609,7 +608,7 @@ public class M3u8DownloadFactory {
         }
 
         public void setLogLevel(int level) {
-//            Log.setLevel(level);
+            Log.setLevel(level);
         }
 
         public Map<String, Object> getRequestHeaderMap() {
@@ -626,10 +625,6 @@ public class M3u8DownloadFactory {
 
         public void addListener(DownloadListener downloadListener) {
             listenerSet.add(downloadListener);
-        }
-
-        public void clearListener() {
-            listenerSet.clear();
         }
 
         private M3u8Download(String DOWNLOADURL) {

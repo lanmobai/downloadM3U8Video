@@ -24,9 +24,9 @@ public class Log {
     }
 
     public static void setLevel(int level) {
-//        if (level != Constant.NONE && level != Constant.INFO && level != Constant.DEBUG && level != Constant.ERROR)
-//            throw new IllegalArgumentException("日志参数信息设置错误！");
-//        Log.level = level;
+        if (level != Constant.NONE && level != Constant.INFO && level != Constant.DEBUG && level != Constant.ERROR)
+            throw new IllegalArgumentException("日志参数信息设置错误！");
+        Log.level = level;
     }
 
     public static int getLevel() {

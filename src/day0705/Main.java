@@ -14,6 +14,8 @@ import java.util.Queue;
 
 public class Main {
 
+    public final static String MyHostURL = "/Users/mobai/Downloads/Java/";
+
     /**
      * 验证信息——Cookie里获取
      */
@@ -66,11 +68,21 @@ public class Main {
         }
     }
 
+    /**
+     * 请使用JDK11来执行，否则可能会有解密错误
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         //1.创建目录
         try {
-            new File("data").mkdir();
-            new File("video").mkdir();
+            new File(MyHostURL + "data").mkdir();
+            new File(MyHostURL + "video").mkdir();
+
+//            System.out.println(File.separator);
+//            System.out.println(File.pathSeparator);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,7 +111,14 @@ public class Main {
         });
         list.forEach(video -> {
             if (video.getUrl().contains(".m3u8?")) {
-                String mp4 = "video/" + video.getDir() + "/" + video.getName() + ".mp4";
+                String mp4 = MyHostURL + "video/" + video.getDir() + "/" + video.getName() + ".mp4";
+                if (new File(mp4).exists()) {
+                    System.out.println(mp4 + "\t文件已存在，跳过。");
+                } else {
+                    queue.offer(video);
+                }
+            } else if (video.getUrl().contains(".mp4?")) {
+                String mp4 = MyHostURL + "video/" + video.getDir() + "/" + video.getName() + ".mp4";
                 if (new File(mp4).exists()) {
                     System.out.println(mp4 + "\t文件已存在，跳过。");
                 } else {
@@ -110,7 +129,7 @@ public class Main {
                 if (new File(zip).exists()) {
                     System.out.println(zip + "\t文件已存在，跳过。");
                 } else {
-                    new File("video/" + video.getDir() + "/资料/").mkdirs();
+                    new File(MyHostURL + "video/" + video.getDir() + "/资料/").mkdirs();
                     okDown(video.getUrl(), zip);
                 }
             }
@@ -122,48 +141,56 @@ public class Main {
         user.courses.forEach(integer -> {
             List<Video> list = new ArrayList<>();
             Boxuegu bo = new Boxuegu(integer + "", user.studentId, user._uc_t_);
-            String gradeName = "data/" + bo.getGradeName();
+            String gradeName = MyHostURL + "video/" + bo.getGradeName();
             //打印一点信息
             System.out.println(gradeName + " : courseId : " + integer);
             if (new File(gradeName + ".json").exists()) {
                 System.out.println(gradeName + ":已存在,跳过");
                 return;
             }
-            bo.getModules().forEach(moduleId -> {
-                bo.getFiles(moduleId).forEach(f -> {
+            List<String> modules = bo.getModules();
+            modules.forEach(moduleId -> {
+                List<ModuleFile> files = bo.getFiles(moduleId);
+                files.forEach(f -> {
                     String name = f.getFileName() + "." + f.getSuffix();
                     System.out.println("\t" + name);
-                    list.add(new Video(f.getFileUrl(), gradeName.substring(5), name));
+                    String dir = MyHostURL + "video/" + bo.getGradeName() + File.separator + moduleId.substring(10);
+                    list.add(new Video(f.getFileUrl(), dir, name));
                 });
-                writeString(gradeName + ".json", JSON.toJSONString(list));
-
+//                writeString(gradeName + ".json", JSON.toJSONString(list));
+//                System.out.println(JSON.toJSONString(list));
                 Module sections = bo.getSections(moduleId);
                 if (sections != null) {
                     sections.getSectionItems().forEach(section -> {
                         //打印一些信息
                         System.out.println("\t" + section.getSectionName());
-                        String dir = gradeName.substring(5) + "/" + section.getSectionName();
-                        section.getPointItems().forEach(point -> {
+                        String dir = MyHostURL + "data/" + bo.getGradeName() + File.separator + moduleId.substring(10) +
+                                File.separator + section.getSectionName();
+                        List<PointItem> pointItems = section.getPointItems();
+                        pointItems.forEach(point -> {
                             String url = bo.getM3u8Url(point.getCcVideoId(), bo.getSiteId(moduleId), bo.getVc(point.getVideoId(), moduleId));
                             //名字部分
-                            String name;
-                            name = point.getPointName();
+                            String name = point.getPointName();
                             Video videoInfo = new Video(url, dir, name);
                             //打印一点信息
                             System.out.println("\t\t" + name);
                             list.add(videoInfo);
                         });
-                        writeString(gradeName + ".json", JSON.toJSONString(list));
+//                        System.out.println(JSON.toJSONString(list));
+//                        writeString(gradeName + ".json", JSON.toJSONString(list));
                     });
                 }
-                writeString(gradeName + ".json", JSON.toJSONString(list));
+//                System.out.println(JSON.toJSONString(list));
+//                writeString(gradeName + ".json", JSON.toJSONString(list));
             });
+//            System.out.println(JSON.toJSONString(list));
             writeString(gradeName + ".json", JSON.toJSONString(list));
         });
+
     }
 
     static void okDown(String src, String name) {
-        name = "video/" + name;
+        name = MyHostURL + "video/" + name;
         try {
             if (new File(name).exists()) {
                 System.out.println(name + " : 已存在，跳过！");
