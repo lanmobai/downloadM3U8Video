@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed93e1d3-8c72-4347-bf60-1a82162bfc4d" name="Default Changelist" comment="">
+    <list default="true" id="ed93e1d3-8c72-4347-bf60-1a82162bfc4d" name="Default Changelist" comment="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory$M3u8Download.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory$M3u8Download.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/download/M3u8DownloadFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/main/Down.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/net/m3u8/main/Down.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/m3u8/download/M3u8DownloadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/m3u8/download/M3u8DownloadFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/m3u8/main/Down.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/m3u8/main/Down.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,7 @@
       <workItem from="1616559805582" duration="1304000" />
       <workItem from="1616727035375" duration="1339000" />
       <workItem from="1616739791051" duration="1115000" />
-      <workItem from="1617188629599" duration="27371000" />
+      <workItem from="1617188629599" duration="30534000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617259996786</created>
@@ -122,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617261172003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md">
+      <created>1617263409178</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617263409180</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +153,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="更新 readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新 readme" />
+    <MESSAGE value="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

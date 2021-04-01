@@ -40,7 +40,7 @@ public class Down {
         m3u8Download.addRequestHeaderMap(headersMap);*/
 
         //先清空
-        //m3u8Download.clearListener();
+        m3u8Download.clearListener();
         //添加监听器
         m3u8Download.addListener(new DownloadListener() {
             @Override
