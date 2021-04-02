@@ -122,7 +122,8 @@ public class Main {
                 if (new File(mp4).exists()) {
                     System.out.println(mp4 + "\t文件已存在，跳过。");
                 } else {
-                    queue.offer(video);
+                    new File(video.getDir()).mkdirs();
+                    okDown(video.getUrl(), mp4);
                 }
             } else {
                 String zip = video.getDir() + "/资料/" + video.getName();

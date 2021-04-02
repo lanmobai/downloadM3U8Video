@@ -108,6 +108,9 @@ public class Boxuegu {
         if (modules.size() == 0) {
             //https://www.boxuegu.com/courseStudyCenter/queryUserCourseStudyRoute?courseId=xxx
             //result[""0""].moduleAndPhaseHomeWorkList[""0""].id
+            //for debug
+//            String s = getContent("https://www.boxuegu.com/courseStudyCenter/queryUserCourseStudyRoute?" + courseId);
+//            System.out.println(s);
             JSONObject.parseObject(getContent("https://www.boxuegu.com/courseStudyCenter/queryUserCourseStudyRoute?" + courseId))
                     .getJSONArray("result").forEach(m -> {
                 ((JSONObject) m).getJSONArray("moduleAndPhaseHomeWorkList").forEach(o -> {

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ed93e1d3-8c72-4347-bf60-1a82162bfc4d" name="Default Changelist" comment="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/boxuegu/day0705/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day0705/Boxuegu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day0705/Boxuegu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day0705/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day0705/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/user.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +70,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,7 +103,8 @@
       <workItem from="1616559805582" duration="1304000" />
       <workItem from="1616727035375" duration="1339000" />
       <workItem from="1616739791051" duration="1115000" />
-      <workItem from="1617188629599" duration="32888000" />
+      <workItem from="1617188629599" duration="41207000" />
+      <workItem from="1617329181626" duration="5796000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617259996786</created>
@@ -137,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617267510099</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化下载">
+      <created>1617270050819</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617270050819</updated>
+    </task>
+    <task id="LOCAL-00007" summary="优化 忽略文档">
+      <created>1617270129202</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617270129203</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +178,9 @@
     <MESSAGE value="更新 readme" />
     <MESSAGE value="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 381e031ca3adce5ec58c459da644030a46ca8abd.&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="11" />
-    <option name="LAST_COMMIT_MESSAGE" value="11" />
+    <MESSAGE value="优化下载" />
+    <MESSAGE value="优化 忽略文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化 忽略文档" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
